@@ -1,0 +1,52 @@
+<!--<html>
+  <head>
+    <title>跌倒检测系统</title>
+  </head>
+  <body>
+	<h1>跌倒检测实时监控直播</h1>
+    <img src="{{ url_for('video_feed') }}">
+  </body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>跌倒检测系统</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/index.css') }}">
+  </head>
+  <header>
+    <meta name="referrer" content="never">
+    <h1>离家模式实时监控</h1>
+    <nav>
+      <ul>
+        <li><a href="/login/">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="/host/">SERVICES</a></li>
+        <li><a href="/reg/">REGISTER</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="main-slider">
+    <img src="{{ url_for('video_feed') }}" style="image-entity; margin-top: 8%; margin-bottom: 5%;" height="100%" width="90%"/>
+    <!--<div class="item image">
+      <span class="loading">Loading...</span>
+      <figure>
+        <div class="slide-image slide-media" style="background-image:url('https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLRkY4S0JDTk1BbE0');">
+          <img src="{{ url_for('video_feed') }}" class="image-entity"/>
+        </div>
+        <figcaption class="caption">Static Image</figcaption>
+      </figure>
+    </div>-->
+  </section>
+
+  <section class="container">
+    <div class="content">
+      <div>Powered by © 2020 基于计算机视觉识别技术的老人防跌倒检测系统</div>
+    </div>
+  </section>
+
+  <script src="{{ url_for('static',filename='js/index.js') }}"></script>
+</html>
